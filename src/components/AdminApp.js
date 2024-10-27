@@ -3,7 +3,7 @@
 import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+const dataProvider = jsonServerProvider("https://my-json-server.typicode.com/arifulislamctg11/jsonplaceholder");
 
 const AdminApp = () => (
   <Admin dataProvider={dataProvider}>
@@ -14,12 +14,11 @@ const AdminApp = () => (
       recordRepresentation="name"
     />
     <Resource
-      name="posts"
+      name="tasks"
       list={ListGuesser}
       edit={EditGuesser}
       recordRepresentation="title"
     />
-    <Resource name="comments" list={ListGuesser} edit={EditGuesser} />
   </Admin>
 );
 

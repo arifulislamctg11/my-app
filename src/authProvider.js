@@ -1,4 +1,4 @@
-const authProvider = {
+const  authProvider = {
     async login({ username, password }) {
         if (username !== "john" || password !== "123") {
             throw new Error("Login failed");
@@ -26,3 +26,5 @@ const authProvider = {
         return { id: username, fullName: username };
     },
 };
+
+export default authProvider;
